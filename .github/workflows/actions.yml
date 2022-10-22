@@ -4,6 +4,8 @@ run-name: Push run by ${{ github.actor }}
 # on: [push, pull_request]
 on:
   repository_dispatch:
+    types:
+      - build
   # schedule:
     # - cron: "0/5 * * * *"
     # - cron: "0/6 * * * *"
