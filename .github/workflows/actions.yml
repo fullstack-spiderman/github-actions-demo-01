@@ -3,13 +3,23 @@ run-name: Push run by ${{ github.actor }}
 
 # on: [push, pull_request]
 on:
-  push:
+  repository_dispatch:
+  # schedule:
+    # - cron: "0/5 * * * *"
+    # - cron: "0/6 * * * *"
   pull_request:
     types:
       - closed
       - assigned
       - opened
       - reopened
+  # push:
+  # pull_request:
+  #   types:
+  #     - closed
+  #     - assigned
+  #     - opened
+  #     - reopened
 
 jobs:
   run-github-actions:
